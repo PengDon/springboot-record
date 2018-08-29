@@ -18,6 +18,12 @@ public class UserInfoTest {
     public void getTest() throws Exception {
         Assert.assertEquals(userInfo.getName(), "李四");
         Assert.assertEquals(userInfo.getSkill(), "java");
+
+    }
+
+    @Test
+    public void getDest() throws Exception {
+        System.out.println(userInfo.getDesc());
     }
 
 }

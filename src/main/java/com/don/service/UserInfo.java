@@ -9,6 +9,8 @@ public class UserInfo {
     public String name;
     @Value("${com.don.user.skill}")
     public String skill;
+    @Value("${com.don.user.desc}")
+    public String desc;
 
     public String getName() {
         return name;
@@ -26,11 +28,20 @@ public class UserInfo {
         this.skill = skill;
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     @Override
     public String toString() {
         return "UserInfo{" +
                 "name='" + name + '\'' +
                 ", skill='" + skill + '\'' +
+                ", desc='" + desc + '\'' +
                 '}';
     }
 }
