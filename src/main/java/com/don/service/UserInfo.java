@@ -5,12 +5,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserInfo {
+    private long id;
     @Value("${com.don.user.name}")
     public String name;
     @Value("${com.don.user.skill}")
     public String skill;
     @Value("${com.don.user.desc}")
     public String desc;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -39,7 +48,8 @@ public class UserInfo {
     @Override
     public String toString() {
         return "UserInfo{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", skill='" + skill + '\'' +
                 ", desc='" + desc + '\'' +
                 '}';
